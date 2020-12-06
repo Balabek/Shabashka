@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="viewport" content="width=1024, user-scalable = no">-->
+    <title>Шабашка™ (-- Андрей Серов --)</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,400italic,300,600,600italic,700&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>-->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link href="slick-1.3.15/slick/slick.css" rel="stylesheet">
+    <link href="css/shabashka.css" rel="stylesheet">
+    <style>
+        .news_area {
+            width: 100%;
+            background-color: #f8f8f8;
+            height: 725px;
+        }
+
+        h3.news_area_ttl {
+            margin-left: 1.3%;
+            text-align: left;
+            margin-bottom: 40px;
+            font-size: 2.857em;
+            font-weight: 300;
+            color: #3b61a6;
+        }
+
+        h3.newstitle {
+            text-align: left;
+            font-size: 1.929em;
+            font-weight: 400;
+            color: #2e4c82;
+        }
+
+        h5.newzdate {
+            float: left;
+            text-align: left;
+            font-size: 1em;
+            font-weight: 700;
+            color: #345084;
+        }
+
+        .fa.tweet_da_nuz {
+            float: left;
+            margin-left: 12px;
+            margin-top: 2.2%;
+            color: #345084;
+
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -ms-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+
+        .fa.tweet_da_nuz:hover {
+            color: #8c96aa;
+        }
+
+        p.newz_itself {
+            float: left;
+            font-size: 1.286em;
+            font-weight: 400;
+            color: #6e7788;
+            text-align: left;
+        }
+
+        .nuzboxx {
+            margin-top: -2%;
+            margin-bottom: 3%;
+        }
+    </style>
+    <link href="css/mq.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="home_loggedin">
+<header>
+    <nav class="shabnav navbar navbar-default" role="navigation">
+        <div class="container shabrand">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#colnav-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="img/main_logo.png" class="hidden-xs img-responsive animated fadeIn" alt="Shabashka logo">
+                    <img src="img/xs_logo.png" class="logo_xs visible-xs img-responsive animated fadeIn" alt="Shabashka logo XS">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="colnav-2">
+                <div class="nav_rite_area">
+                    <section class="upper_linx">
+                        <img src="img/slide1.jpg" class="img-responsive img-circle tiny_profile_pic">
+                        <ul id="glox" class="uppers nav navbar-nav">
+                            <li class="dropdown">
+                                <button class="btn btn-sm btn_profile_top dropdown-toggle" type="button" id="header_profile" data-toggle="dropdown" aria-expanded="false">
+                                    Андрей Серов
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul id="top_profile_drop" class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="header_profile">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Мой профиль</a></li>
+                                    <li class="profile_divider"></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Избранное</a></li>
+                                    <li class="profile_divider"></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Настройки</a></li>
+                                </ul>
+                            </li>
+                            <li><button class="btn nav_upper_button">Выход</button></li>
+                            <li class="dropdown">
+                                <button class="btn btn-sm btn_langs_top dropdown-toggle" type="button" id="header_langs" data-toggle="dropdown" aria-expanded="false">
+                                    Русский
+                                    <i id="ezz" class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul id="top_lang_select" class="dropdown-menu" role="menu" aria-labelledby="header_langs">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">English</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Deutsch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="lower_linx hidden-xs">
+                        <ul class="lowers nav navbar-nav">
+                            <li><button class="btn nav_lower_button">Исполнители</button></li>
+                            <li><button class="btn nav_lower_button">Все задания</button></li>
+                            <li id="order" class="dropdown"><button id="place_order" class="btn nav_lower_button dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Создать задание</button>
+                                <ul id="order_drop" class="dropdown-menu" role="menu">
+                                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Курьерские услуги</a>
+                                        <ul id="courier" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                                            <li><a href="#">Услуги пешего курьера</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Услуги курьера на авто</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Срочная доставка</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Купить и доставить</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Доставка продуктов</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Доставка еды в рестораны</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Курьер на регулярное сотрудничество</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Другая посылка</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Компьютерная помощь</a>
+                                        <ul id="pc_help" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                                            <li><a href="#">Ремонт компьютеров и ноутбуков</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Установка и настройка ОС и ПО</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Восстановление данных</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Удаление вирусов</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Ремонт и доставка комлектующих</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Настройка интернета и Wi-Fi</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Подключение и ремонт оргтехники</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Консультация и обучени</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Ремонт мониторов</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Бытовой ремонт</a>
+                                        <ul id="home_repair" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                                            <li><a href="#">Ремонт под ключ</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Отделочные работы</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Мастер на час</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Сантехнические работы</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Работа с электричеством</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Установка и ремонт дверей, замков</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Подключение и ремонт оргтехники</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Укладка плитки</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Сборка и ремонт мебели</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Сроительные услуги</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Установка и ремонт техники</a>
+                                        <ul id="tech_install" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                                            <li><a href="#">Варочные панели</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Электрические плиты</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Газовые плиты</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Посудомоечные машины</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Стиральные машины</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Холодильники и морозильники</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Кондиционеры и сплит-системы</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Духовые шкафы, духовки</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Водонагреватели, бойлеры, котлы</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Вытяжки</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Уборка и помощь по хозяйству</a>
+                                        <ul id="household_help" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                                            <li><a href="#">Разовая уборка в квартире</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Регулярная уборка в квартире</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Мойка окон</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Приготовление еды</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Глажка белья</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Чистка ковров, мебели</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Вынос мусора</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Помощь при переезде</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Ремонт одежды</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Ремонт цифровой техники</a>
+                                        <ul id="digital_repair" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                                            <li><a href="#">Планшеты и телефоны</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Телевизоры и мониторы</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Видео-фото техника</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Аудиотехника и системы</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Игровые приставки</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Спутниковые антенны</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Автомобильная электроника</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Грузоперевозки</a>
+                                        <ul id="logistics" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                                            <li><a href="#">Переезды</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Мебель и бытовая техника</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Пассажирские перевозки</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Строительные грузы и оборудование</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Транспортные средства</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Негабаритный груз</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Вывоз мусора</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Виртуальный помощник</a>
+                                        <ul id="virtual_assistant" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                                            <li><a href="#">Поиск и обработка информации</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Расшифровка аудио-и видео записей гарлахов</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Прозвон баз по телефону</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Работа с текстом, копирайтинг, перевод</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Размещение объявлений</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Реклама и продвижение в интернете</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Виртуальный ассистент</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Работа в Excel, PowerPoint, и.т.д.</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Мероприятия и промоакции</a>
+                                        <ul id="promotion" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                                            <li><a href="#">Раздача промо-материалов</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Помощь в проведении мероприятий</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Промоутер</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Тамада, ведущий, аниматор</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Промо-модель</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Тайный покупатель</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Супервайзер, хостес</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Разнорабочий</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Фото- и видеоуслуги</a>
+                                        <ul id="fotovideo" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                                            <li><a href="#">Фотосъёмка</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Видеосъёмка</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Обработка фото</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Обработка и монтаж видео</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Оцифровка</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Обучение и мастер-классы</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Дизайн</a>
+                                        <ul id="design" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                                            <li><a href="#">Дизайн сайтов</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Логотипы, фирменный стиль</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Иллюстрации, иконки, арт</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Листовки, буклеты, визитки</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Баннеры, оформление соц. сетей</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Инфографика, презентации</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Наружная реклама, вывески</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">3D-графика, анимация</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Web-разработка</a>
+                                        <ul id="web_design" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                                            <li><a href="#">Сайт под ключ</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Поддержка и помощь по сайту</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Вёрстка</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Программирование</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Тестирование, юзабилити</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Разработка приложений и программ</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Красота и здоровье</a>
+                                        <ul id="beauty" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                                            <li><a href="#">Парикмахерские услуги</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Ногтевой сервис</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Косметология, массаж</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Массаж</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Стилисты и имиджмейкеры</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Персональный тренер</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Юридическая помощь</a>
+                                        <ul id="legal" class="order_sub_drop dropdown-menu legal_cases" role="menu" data-toggle="dropdown" aria-expanded="true">
+                                            <li><a href="#">Юридическая консультация</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Составление и проверка договоров</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Оформление документов</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Оформление и подача жалоб/исков</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Помощь при ДТП</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Защита в суде</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Сопровождение сделок</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Регистрация/ликвидация компаний</a></li>
+                                            <li class="sub_divider"></li>
+                                            <li><a tabindex="-1" href="#">Другое</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="collapsed_lower_linx" class="collapselow_area center-block visible-xs animated fadeindownbig">
+                        <ul class="collapselowlinxx">
+                            <li> <button class="btn btn-block ghostbtn ">Исполнители</button> </li>
+                            <li> <button class="btn btn-block ghostbtn ">Все задания</button> </li>
+                            <li> <button class="btn btn-block ghostbtn ">Создать задание</button> </li>
+                        </ul>
+                    </section>
+
+                </div>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+</header>
+
+<div id="shabashka-header-carousel" class="carousel slide" data-ride="carousel">
+    <!-- Pager bullets -->
+    <ol class="carousel-indicators pagerz">
+        <li data-target="#shabashka-header-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#shabashka-header-carousel" data-slide-to="1"></li>
+        <li data-target="#shabashka-header-carousel" data-slide-to="2"></li>
+        <li data-target="#shabashka-header-carousel" data-slide-to="3"></li>
+        <li data-target="#shabashka-header-carousel" data-slide-to="4"></li>
+        <li data-target="#shabashka-header-carousel" data-slide-to="5"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 h_banner">
+                    <h2 class="hidden-xs">Самый удобный способ<br>заказать любую услугу</h2>
+                    <p class="hidden-xs">Шабашка поможет найти надёжного исполнителя<br>для решения Ваших задач.</p>
+                    <button class="btn btn-lg order">Заказать услугу</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item active">
+            <img src="img/headerpic1.jpg" width='100%' alt="Lady in the store">
+        </div>
+        <div class="item">
+            <img src="img/headerpic2.jpg" width='100%' alt="Luxury bath">
+        </div>
+        <div class="item">
+            <img src="img/headerpic3.jpg" width='100%' alt="Violin player">
+        </div>
+        <div class="item">
+            <img src="img/headerpic4.jpg" width='100%' alt="Liquor spices">
+        </div>
+        <div class="item">
+            <img src="img/headerpic5.jpg" width='100%' alt="Game developer">
+        </div>
+    </div>
+</div>
+
+<div class="whitesect"> <!-- Services section START -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-11 col-sm-offset-1 mid_circle_holder animated fadeIn">
+                <section class="col-sm-2 col-xs-4 cirlce_holder">
+                    <a href="#" class="service_crcl push"><img src="img/circles/delivery.png" class="crcl img-responsive"></a>
+                    <p>Курьерская<br>служба</p>
+                </section>
+                <section class="col-sm-2 col-xs-4 cirlce_holder">
+                    <a href="#" class="service_crcl push"><img src="img/circles/desktop.png" class="crcl img-responsive"></a>
+                    <p>Компьютерная<br>помощь</p>
+                </section>
+                <section class="col-sm-2 col-xs-4 cirlce_holder">
+                    <a href="#" class="service_crcl push"><img src="img/circles/reparation.png" class="crcl img-responsive"></a>
+                    <p>Ремонт<br>дома</p>
+                </section>
+                <section class="col-sm-2 col-xs-4 cirlce_holder">
+                    <a href="#" class="service_crcl push"><img src="img/circles/logistix.png" class="crcl img-responsive"></a>
+                    <p>Логистические<br>услуги</p>
+                </section>
+                <section class="col-sm-2 col-xs-4 cirlce_holder">
+                    <a href="#" class="service_crcl push"><img src="img/circles/vacuum.png" class="crcl img-responsive"></a>
+                    <p>Уборка<br>помещений</p>
+                </section>
+
+                <section class="col-sm-2 col-xs-4 cirlce_holder">
+                    <a href="#" class="service_crcl push"><img src="img/circles/legal.png" class="crcl img-responsive"></a>
+                    <p>Юридическая<br>помощь</p>
+                </section>
+                <section class="col-sm-2 col-xs-4 cirlce_holder">
+                    <a href="#" class="service_crcl push"><img src="img/circles/photovideo.png" class="crcl img-responsive"></a>
+                    <p>Фото и видео<br>услуги</p>
+                </section>
+                <section class="col-sm-2 col-xs-4 cirlce_holder">
+                    <a href="#" class="service_crcl push"><img src="img/circles/beauty.png" class="crcl img-responsive"></a>
+                    <p>Красота и<br>здоровье</p>
+                </section>
+                <section class="col-sm-2 col-xs-4 cirlce_holder">
+                    <a href="#" class="service_crcl push"><img src="img/circles/assistant.png" class="crcl img-responsive"></a>
+                    <p>Установка<br>быт. техники</p>
+                </section>
+                <section class="col-sm-2 col-xs-4 cirlce_holder">
+                    <a href="#" class="service_crcl push"><img src="img/circles/painter.png" class="crcl img-responsive"></a>
+                    <p>Частные<br>уроки</p>
+                </section>
+            </div> <!-- Mid Circle Holder END -->
+            <div class="center-block">
+                <button class="btn btn-lg center-block services_btn">Все услуги</button>
+            </div>
+        </div> <!-- Row END -->
+    </div>
+</div> <!-- Main ('services') section END -->
+<div class="howitworx"> <!-- How it Works section START -->
+    <div class="container">
+        <div class="row">
+            <section class="howitworx_banner_holder center-block">
+                <h1>Как это работает</h1>
+                <p>Всего несколько простых шагов позволят Вам с лёгкостью
+                    понять основную концепцию наших услуг и создать задание (н.п. "чистка унитаза")
+                </p>
+                <img src="img/howitworx_circlesteps.png" class="crcl_steps img-responsive center-block">
+            </section>
+            <div class="center-block">
+                <button class="btn btn-lg center-block create_task_btn">Создать задание</button>
+            </div>
+        </div> <!-- Row END -->
+    </div>
+</div> <!-- How it Works section END -->
+<div class="reddish_area">
+    <div class="container">
+        <div class="row">
+            <section class="onemorething center-block">
+                <h1>Что ещё важно...</h1>
+                <img id="s_icon" src="img/handandcash.png" class="center-block img-responsive handandcash">
+                <p id="slogan">Вы платите исполнителю<br>не напрямую, а с помощью <b>Шабашки</b> </p>
+                <section class="col-sm-6 col-sm-offset-3 three_step_holder">
+                    <button id="step_one" class="active_crcl">1</button>
+                    <button id="step_two" class="passive_crcl glow">2</button>
+                    <button id="step_three" class="passive_crcl glow">3</button>
+                </section>
+                <hr class="col-sm-5 col-sm-offset-3 whiteline">
+            </section>
+        </div>
+    </div>
+</div> <!-- Reddish area END -->
+
+<div class="performers_area">
+    <div class="container">
+        <div class="row">
+            <section class="performers center-block">
+                <h1>Исполнители</h1>
+            </section>
+            <div class="center-block">
+                <div id="perfoslider">
+                    <div>
+                        <a href="#"><img src="img/slide1.jpg" class="performa img-circle img-responsive rotate"></a>
+                        <h3 class="perfo_name">Андрей Серов</h3>
+                        <h5 class="perfo_post">Таксист</h5>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/slide2.jpg" class="performa img-circle img-responsive rotate"></a>
+                        <h3 class="perfo_name">Елена Аксёнова</h3>
+                        <h5 class="perfo_post">Фотограф</h5>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/slide3.jpeg" class="performa img-circle img-responsive rotate"></a>
+                        <h3 class="perfo_name">Влад Мирзоев</h3>
+                        <h5 class="perfo_post">Сантехник</h5>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/slide00.jpg" class="performa img-circle img-responsive rotate"></a>
+                        <h3 class="perfo_name">Ахмед Брахан-Оглы</h3>
+                        <h5 class="perfo_post">Дворник</h5>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/slide4.jpg" class="performa img-circle img-responsive rotate"></a>
+                        <h3 class="perfo_name">Илья Онопко</h3>
+                        <h5 class="perfo_post">Переводчик</h5>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/slide5.jpeg" class="performa img-circle img-responsive rotate"></a>
+                        <h3 class="perfo_name">Оксана Полякова</h3>
+                        <h5 class="perfo_post">Копирайтер</h5>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/slide6.jpg" class="performa img-circle img-responsive rotate"></a>
+                        <h3 class="perfo_name">Евдокия Лысенко</h3>
+                        <h5 class="perfo_post">Ди-Джей</h5>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/slide7.jpeg" class="performa img-circle img-responsive rotate"></a>
+                        <h3 class="perfo_name">Марина Францева</h3>
+                        <h5 class="perfo_post">Нотариус</h5>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/slide00.jpg" class="performa img-circle img-responsive rotate"></a>
+                        <h3 class="perfo_name">Авраам Шульц</h3>
+                        <h5 class="perfo_post">Ювелир</h5>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/slide8.jpg" class="performa img-circle img-responsive rotate"></a>
+                        <h3 class="perfo_name">Игорь Сивогривов</h3>
+                        <h5 class="perfo_post">Разработчик ПО</h5>
+                    </div>
+                </div> <!-- Slider END -->
+                <button class="btn btn-lg perfolist center-block">Весь список</button>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <section class="col-sm-6 col-xs-6">
+                        <img src="img/shabash_man.png" class="malyar img-responsive center-block">
+                    </section>
+                    <section class="col-sm-6 col-xs-6">
+                        <p class="testimonial">
+                            "В официальной биографии новоназначенного вице-премьера
+                            Украины Валерия Вощевского (Радикальная партия) указано,
+                            что на него было возбуждено уголовное дело за попытку украсть
+                            ГП "Дорожное ремонтно-строительное управление №100".
+                            Биографию распространили на своих страницах в социальных
+                            сетях сразу несколько депутатов."
+                        </p>
+                        <h4 class="testimonial_signature">
+                            Руслан Федотов<br>
+                            Компания "ДУНКАН"
+                        </h4>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="news_area">
+    <div class="container">
+        <div class="row">
+            <div id="daher_nuzz">
+                <h3 class="news_area_ttl">News</h3>
+                <div> <!-- News Four-Set 1 -->
+                    <div class="col-sm-5 col-sm-offset-0 nuzboxx">
+                        <h3 class="newstitle">Developer Takes on Angry Birds in a “Serious” Way</h3>
+                        <h5 class="newzdate">9 October 2014</h5> <a href="#"><i class="fa fa-twitter tweet_da_nuz"></i> </a>
+                        <p class="newz_itself">
+                            Look out, “Angry Birds”, a new group of ornery animals is looking to take
+                            over mobile gaming and expand its own family-friendly brand beyond that platform.
+                            Seriously. A Daher Capital backed company, takes on Angry Birds now.
+                        </p>
+                    </div>
+
+                    <div class="col-sm-5 col-sm-offset-1 nuzboxx">
+                        <h3 class="newstitle">Connectivity Closes $6.35 Million in Series A Funding</h3>
+                        <h5 class="newzdate">5 October 2014</h5>
+                        <p class="newz_itself">
+                            Connectivity SM, a leading software provider of customer intelligence and
+                            engagement solutions for businesses, announced today that it has secured $6.35
+                            million in Series A funding. The financing was led by Greycroft Partners.
+                        </p>
+                    </div>
+
+                    <div class="col-sm-5 col-sm-offset-0 nuzboxx">
+                        <h3 class="newstitle">Bark & Co builds out the pooch lover’s market</h3>
+                        <h5 class="newzdate">22 August 2014</h5>
+                        <p class="newz_itself">
+                            NYC’s Bark & Co, the dog-lover’s eCommerce tech company, has just netted
+                            a cool $15 million in Series B led by Resolute.vc. E-commerce analysts, whose
+                            minds are turning to New York’s doggie treat subscription service BarkBox.
+                        </p>
+                    </div>
+
+                    <div class="col-sm-5 col-sm-offset-1 nuzboxx">
+                        <h3 class="newstitle">Finnish games start-up Seriously raises $2.65m</h3>
+                        <h5 class="newzdate">1 July 2014</h5>
+                        <p class="newz_itself">
+                            New Finnish game developer Seriously has raised $2.65m in a Series Seed B
+                            funding round. The investment was led by Sunstone Capital, Upfront Ventures
+                            and Daher Capital. To date the studio has raised $5m as well.
+                        </p>
+                    </div>
+
+                </div> <!-- News Four-Set 1 END-->
+
+                <div> <!-- News Four-Set 1 -->
+                    <div class="col-sm-5 col-sm-offset-0 nuzboxx">
+                        <h3 class="newstitle">New Orlean-based rapper Lil' Cunt murdered in his uncle's garage</h3>
+                        <h5 class="newzdate">18 September 2013</h5> <a href="#"><i class="fa fa-twitter tweet_da_nuz"></i> </a>
+                        <p class="newz_itself">
+                            Look out, “Angry Birds”, a new group of ornery animals is looking to take
+                            over mobile gaming and expand its own family-friendly brand beyond that platform.
+                            Seriously. A Daher Capital backed company, takes on Angry Birds now.
+                        </p>
+                    </div>
+
+                    <div class="col-sm-5 col-sm-offset-1 nuzboxx">
+                        <h3 class="newstitle">Mark Gonzales to host a brand new pimp parade in LA</h3>
+                        <h5 class="newzdate">25 July 2013</h5>
+                        <p class="newz_itself">
+                            Connectivity SM, a leading software provider of customer intelligence and
+                            engagement solutions for businesses, announced today that it has secured $6.35
+                            million in Series A funding. The financing was led by Greycroft Partners.
+                        </p>
+                    </div>
+
+                    <div class="col-sm-5 col-sm-offset-0 nuzboxx">
+                        <h3 class="newstitle">Sevastopol will accommodate new nuclear weapons</h3>
+                        <h5 class="newzdate">7 June 2013</h5>
+                        <p class="newz_itself">
+                            NYC’s Bark & Co, the dog-lover’s eCommerce tech company, has just netted
+                            a cool $15 million in Series B led by Resolute.vc. E-commerce analysts, whose
+                            minds are turning to New York’s doggie treat subscription service BarkBox.
+                        </p>
+                    </div>
+
+                    <div class="col-sm-5 col-sm-offset-1 nuzboxx">
+                        <h3 class="newstitle">Love me tender, love me sweet</h3>
+                        <h5 class="newzdate">21 May 2013</h5>
+                        <p class="newz_itself">
+                            New Finnish game developer Seriously has raised $2.65m in a Series Seed B
+                            funding round. The investment was led by Sunstone Capital, Upfront Ventures
+                            and Daher Capital. To date the studio has raised $5m as well.
+                        </p>
+                    </div>
+
+                </div> <!-- News Four-Set 1 END-->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="shabfoot">
+    <div class="container">
+        <div class="row">
+            <section class="foot_main_area">
+                <section class="col-sm-3">
+                    <ul class="foot_linx_1">
+                        <li><a href="#">Как это работает</a> </li>
+                        <li><a href="#">Как стать исполнителем</a> </li>
+                        <li><a href="#">Безопасность и гарантии</a> </li>
+                        <li><a href="#">Отзывы исполнителей</a> </li>
+                        <li><a href="#">Отзывы заказчиков</a> </li>
+                        <li><a href="#">Награды</a> </li>
+                    </ul>
+                </section>
+                <section class="col-sm-3">
+                    <ul class="foot_linx_2">
+                        <li><a href="#">Карта сайта</a> </li>
+                        <li><a href="#">Стать специалистом</a> </li>
+                        <li><a href="#">Новости</a> </li>
+                        <li><a href="#">Условия использования</a> </li>
+                        <li><a href="#">Правовые документы</a> </li>
+                    </ul>
+                </section>
+                <section class="col-sm-6 col-xs-12 quikform">
+                    <h3>Задать вопрос</h3>
+                    <form id="foot_quick_form" role="form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="foot_email" placeholder="Адрес эл. почты" onfocus="placeholder= '' " onblur="placeholder='Адрес эл. почты' ">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="foot_text" rows="5" placeholder="Сообщение" onfocus="placeholder= '' " onblur="placeholder='Сообщение' "></textarea>
+                        </div>
+                        <button type="submit" class="foot_send btn btn-default">Послать</button>
+                    </form>
+                </section> <!-- Quikform END -->
+                <div class="clearfix"></div>
+                <section class="col-sm-6 col-xs-12 pull-left">
+                    <a href="#"><img src="img/main_logo.png" class="footer_logo img-responsive"> </a>
+                    <img src="img/slide1.jpg" class="img-responsive img-circle tiny_profile_pic_foot">
+                    <ul class="foot_btns_loggedin">
+                        <li class="dropdown">
+                            <button class="btn btn-sm btn_profile_foot dropdown-toggle" type="button" id="footer_profile" data-toggle="dropdown" aria-expanded="false">
+                                Андрей Серов
+                                <i id="ez" class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul id="bottom_profile_drop" class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="footer_profile">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Мой профиль</a></li>
+                                <li class="profile_divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Избранное</a></li>
+                                <li class="profile_divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Настройки</a></li>
+                            </ul>
+                        </li>
+                        <li><button class="btn btn-sm btn_footerenter">Выход</button></li>
+                    </ul>
+                </section>
+                <section class="col-sm-6 col-xs-12 pull-right">
+                    <ul class="socializer">
+                        <li><a href="#" class="fcbk"></a></li>
+                        <li><a href="#" class="twtr"></a></li>
+                        <li><a href="#" class="lkdn"></a></li>
+                    </ul>
+                    <section class="micro_info_area">
+                        <h5>&copy; 2015 Shabashka. All Rights Reserved.</h5>
+                    </section>
+                </section>
+
+            </section> <!-- Footer main area END -->
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+<script src="slick-1.3.15/slick/slick.js"></script>
+<script src="js/jquery.browser.js"></script>
+<script src="js/bootstrapValidator.js"></script>
+<script src="js/jquery.form.js"></script>
+<script>
+    $('#daher_nuzz').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+</script>
+<script src="js/shabashka.js"></script>
+
+
+</body>
+</html>

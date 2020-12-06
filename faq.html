@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="viewport" content="width=1024, user-scalable = no">-->
+    <title>Шабашка™ (-- ЧЗВ --)</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,400italic,300,600,600italic,700&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>-->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link href="slick-1.3.15/slick/slick.css" rel="stylesheet">
+    <link href="css/shabashka.css" rel="stylesheet">
+    <link href="css/mq.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="registration">
+<header>
+    <nav class="shabnav navbar navbar-default" role="navigation">
+        <div class="container shabrand">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#colnav-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="img/main_logo.png" class="hidden-xs img-responsive animated fadeIn" alt="Shabashka logo">
+                    <img src="img/xs_logo.png" class="logo_xs visible-xs img-responsive animated fadeIn" alt="Shabashka logo XS">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="colnav-2">
+                <div class="nav_rite_area">
+                    <section class="upper_linx">
+                        <img src="img/slide1.jpg" class="img-responsive img-circle tiny_profile_pic">
+                        <ul id="glox" class="uppers nav navbar-nav">
+                            <li class="dropdown">
+                                <button class="btn btn-sm btn_profile_top dropdown-toggle" type="button" id="header_profile" data-toggle="dropdown" aria-expanded="false">
+                                    Андрей Серов
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul id="top_profile_drop" class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="header_profile">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Мой профиль</a></li>
+                                    <li class="profile_divider"></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Избранное</a></li>
+                                    <li class="profile_divider"></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Настройки</a></li>
+                                </ul>
+                            </li>
+                            <li><button class="btn nav_upper_button">Выход</button></li>
+                            <li class="dropdown">
+                                <button class="btn btn-sm btn_langs_top dropdown-toggle" type="button" id="header_langs" data-toggle="dropdown" aria-expanded="false">
+                                    Русский
+                                    <i id="ezz" class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul id="top_lang_select" class="dropdown-menu" role="menu" aria-labelledby="header_langs">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">English</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Deutsch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="lower_linx hidden-xs">
+                    <ul class="lowers nav navbar-nav">
+                    <li><button class="btn nav_lower_button">Исполнители</button></li>
+                    <li><button class="btn nav_lower_button">Все задания</button></li>
+                    <li id="order" class="dropdown"><button id="place_order" class="btn nav_lower_button dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Создать задание</button>
+                    <ul id="order_drop" class="dropdown-menu" role="menu">
+                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Курьерские услуги</a>
+                        <ul id="courier" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                            <li><a href="#">Услуги пешего курьера</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Услуги курьера на авто</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Срочная доставка</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Купить и доставить</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Доставка продуктов</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Доставка еды в рестораны</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Курьер на регулярное сотрудничество</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Другая посылка</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Компьютерная помощь</a>
+                        <ul id="pc_help" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                            <li><a href="#">Ремонт компьютеров и ноутбуков</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Установка и настройка ОС и ПО</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Восстановление данных</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Удаление вирусов</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Ремонт и доставка комлектующих</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Настройка интернета и Wi-Fi</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Подключение и ремонт оргтехники</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Консультация и обучени</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Ремонт мониторов</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Бытовой ремонт</a>
+                        <ul id="home_repair" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                            <li><a href="#">Ремонт под ключ</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Отделочные работы</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Мастер на час</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Сантехнические работы</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Работа с электричеством</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Установка и ремонт дверей, замков</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Подключение и ремонт оргтехники</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Укладка плитки</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Сборка и ремонт мебели</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Сроительные услуги</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Установка и ремонт техники</a>
+                        <ul id="tech_install" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                            <li><a href="#">Варочные панели</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Электрические плиты</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Газовые плиты</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Посудомоечные машины</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Стиральные машины</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Холодильники и морозильники</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Кондиционеры и сплит-системы</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Духовые шкафы, духовки</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Водонагреватели, бойлеры, котлы</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Вытяжки</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Уборка и помощь по хозяйству</a>
+                        <ul id="household_help" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                            <li><a href="#">Разовая уборка в квартире</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Регулярная уборка в квартире</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Мойка окон</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Приготовление еды</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Глажка белья</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Чистка ковров, мебели</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Вынос мусора</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Помощь при переезде</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Ремонт одежды</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Ремонт цифровой техники</a>
+                        <ul id="digital_repair" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                            <li><a href="#">Планшеты и телефоны</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Телевизоры и мониторы</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Видео-фото техника</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Аудиотехника и системы</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Игровые приставки</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Спутниковые антенны</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Автомобильная электроника</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Грузоперевозки</a>
+                        <ul id="logistics" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                            <li><a href="#">Переезды</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Мебель и бытовая техника</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Пассажирские перевозки</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Строительные грузы и оборудование</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Транспортные средства</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Негабаритный груз</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Вывоз мусора</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Виртуальный помощник</a>
+                        <ul id="virtual_assistant" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                            <li><a href="#">Поиск и обработка информации</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Расшифровка аудио-и видео записей</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Прозвон баз по телефону</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Работа с текстом, копирайтинг, перевод</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Размещение объявлений</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Реклама и продвижение в интернете</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Виртуальный ассистент</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Работа в Excel, PowerPoint, и.т.д.</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Мероприятия и промоакции</a>
+                        <ul id="promotion" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                            <li><a href="#">Раздача промо-материалов</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Помощь в проведении мероприятий</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Промоутер</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Тамада, ведущий, аниматор</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Промо-модель</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Тайный покупатель</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Супервайзер, хостес</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Разнорабочий</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Фото- и видеоуслуги</a>
+                        <ul id="fotovideo" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                            <li><a href="#">Фотосъёмка</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Видеосъёмка</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Обработка фото</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Обработка и монтаж видео</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Оцифровка</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Обучение и мастер-классы</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Дизайн</a>
+                        <ul id="design" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                            <li><a href="#">Дизайн сайтов</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Логотипы, фирменный стиль</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Иллюстрации, иконки, арт</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Листовки, буклеты, визитки</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Баннеры, оформление соц. сетей</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Инфографика, презентации</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Наружная реклама, вывески</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">3D-графика, анимация</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Web-разработка</a>
+                        <ul id="web_design" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                            <li><a href="#">Сайт под ключ</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Поддержка и помощь по сайту</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Вёрстка</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Программирование</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Тестирование, юзабилити</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Разработка приложений и программ</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Красота и здоровье</a>
+                        <ul id="beauty" class="order_sub_drop dropdown-menu" role="menu" data-toggle="dropdown" aria-expanded="true">
+                            <li><a href="#">Парикмахерские услуги</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Ногтевой сервис</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Косметология, массаж</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Массаж</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Стилисты и имиджмейкеры</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Персональный тренер</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Что-то другое</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown_submenu" data-toggle="dropdown" aria-expanded="true"><a href="#" class="ezdi bubble-left">Юридическая помощь</a>
+                        <ul id="legal" class="order_sub_drop dropdown-menu legal_cases" role="menu" data-toggle="dropdown" aria-expanded="true">
+                            <li><a href="#">Юридическая консультация</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Составление и проверка договоров</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Оформление документов</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Оформление и подача жалоб/исков</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Помощь при ДТП</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Защита в суде</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Сопровождение сделок</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Регистрация/ликвидация компаний</a></li>
+                            <li class="sub_divider"></li>
+                            <li><a tabindex="-1" href="#">Другое</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                    </li>
+                    </ul>
+                    </section>
+
+                    <section id="collapsed_lower_linx" class="collapselow_area center-block visible-xs animated fadeindownbig">
+                        <ul class="collapselowlinxx">
+                            <li> <button class="btn btn-block ghostbtn ">Исполнители</button> </li>
+                            <li> <button class="btn btn-block ghostbtn ">Все задания</button> </li>
+                            <li> <button class="btn btn-block ghostbtn ">Создать задание</button> </li>
+                        </ul>
+                    </section>
+
+                </div>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+</header>
+
+<div class="underheader_holder">
+    <section class="underheader"></section>
+</div>
+
+<div class="faq_section_holder">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-11 col-sm-offset-1 faqbox">
+                <h1 class="faqttl">Часто Задаваемые Вопросы</h1>
+                <hr class="col-sm-11 faqline">
+                <div class="col-sm-12 faqholder" id="accordion">
+                    <div class="panel" id="panel1">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#collapseOne" data-toggle="collapse" data-parent="#accordion" class="collapsed" data-target="#collapseOne">
+                                    Что из себя представляет сервис Шабашка?
+                                </a>
+                            </h4>
+
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse">
+                            <div class="panel-body">Резиденты России должны будут продавать Центробанку валюту,
+                                вырученную от сделок с нерезидентами. В том числе от сделок, предусматривающих
+                                передачу товаров, выполнение работ и оказание услуг, а также передачу информации
+                                и результатов интеллектуальной деятельности и исключительных прав на них.
+                                Кроме того, Банк России сможет менять долю валютной выручки, подлежащей
+                                обязательной продаже, при условии, что она не превысит 50%. Общеизвестно, что
+                                птицы произошли от динозавров, однако до сих пор неясно, что привело к их бурному
+                                видообразованию после вымирания рептилий. Поэтому становится важным сравнительные
+                                исследования геномов птиц и их предков среди динозавров.
+                            </div>
+                        </div>
+                   </div> <!-- Main wrapper panel END -->
+
+                    <div class="panel" id="panel2">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#collapseTwo" data-toggle="collapse" data-parent="#accordion" class="collapsed" data-target="#collapseTwo">
+                                    Почему выгодно пользоваться услугами наших исполнителей?
+                                </a>
+                            </h4>
+
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">Резиденты России должны будут продавать Центробанку валюту,
+                                вырученную от сделок с нерезидентами. В том числе от сделок, предусматривающих
+                                передачу товаров, выполнение работ и оказание услуг, а также передачу информации
+                                и результатов интеллектуальной деятельности и исключительных прав на них.
+                                Кроме того, Банк России сможет менять долю валютной выручки, подлежащей
+                                обязательной продаже, при условии, что она не превысит 50%. Общеизвестно, что
+                                птицы произошли от динозавров, однако до сих пор неясно, что привело к их бурному
+                                видообразованию после вымирания рептилий. Поэтому становится важным сравнительные
+                                исследования геномов птиц и их предков среди динозавров.
+                            </div>
+                        </div>
+                    </div> <!-- Main wrapper panel END -->
+
+                    <div class="panel" id="panel3">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#collapseThree" data-toggle="collapse" data-parent="#accordion" class="collapsed" data-target="#collapseThree">
+                                    Исполнитель украл мой iPhone, что делать?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">На данный момент лондонские аэропорты, включая Хитроу -
+                                самый загруженный аэропорт в Европе, сообщают о задержках рейсов. Сбой системы
+                                затрагивает не только Хитроу, но также Гатвик, Станстед, Лондон Сити и Лютон.
+                                обязательной продаже, при условии, что она не превысит 50%. Общеизвестно, что
+                                птицы произошли от динозавров, однако до сих пор неясно, что привело к их бурному
+                                видообразованию после вымирания рептилий. Поэтому становится важным сравнительные
+                                исследования геномов птиц и их предков среди динозавров.
+                                МЭА ухудшило свой прогноз мирового спроса на нефть в 2015 году на 230 тысяч баррелей
+                                в сутки с предыдущего уровня, до 93,3 млн б/с, при этом повысив прогноз добычи в странах,
+                                не входящих в ОПЕК, на 200 тыс. б/с, до 57,8 млн б/с, что на 1,3 млн б/с больше уровня
+                                нынешнего года.
+                            </div>
+                        </div>
+                    </div> <!-- Main wrapper panel END -->
+
+                    <div class="panel" id="panel4">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#collapseFour" data-toggle="collapse" data-parent="#accordion" class="collapsed" data-target="#collapseFour">
+                                    Можно ли нанять нескольких исполнителей сразу?
+                                </a>
+                            </h4>
+
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse">
+                            <div class="panel-body">На данный момент лондонские аэропорты, включая Хитроу -
+                                самый загруженный аэропорт в Европе, сообщают о задержках рейсов. Сбой системы
+                                затрагивает не только Хитроу, но также Гатвик, Станстед, Лондон Сити и Лютон.
+                                обязательной продаже, при условии, что она не превысит 50%.
+                                МЭА ухудшило свой прогноз мирового спроса на нефть в 2015 году на 230 тысяч баррелей
+                                в сутки с предыдущего уровня, до 93,3 млн б/с, при этом повысив прогноз добычи в странах,
+                                не входящих в ОПЕК, на 200 тыс. б/с, до 57,8 млн б/с, что на 1,3 млн б/с больше уровня
+                                нынешнего года.
+                            </div>
+                        </div>
+                    </div> <!-- Main wrapper panel END -->
+
+                    <div class="panel" id="panel5">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#collapseFive" data-toggle="collapse" data-parent="#accordion" class="collapsed" data-target="#collapseFive">
+                                    Какие есть гарантии у заказчика в случае плохого<br> качества работы?
+                                </a>
+                            </h4>
+
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse">
+                            <div class="panel-body">Президент России Владимир Путин прибыл с официальным визитом в
+                                Индию обсудить с руководством страны вопросы сотрудничества в энергетике, в том числе
+                                атомной, машиностроении и военно-технической сфере. Документ о поставках нефти был
+                                подписан в рамках этого визита. Кроме того, Роснефть и Газпром вместе с индийскими
+                                компаниями готовят проекты по освоению российского арктического шельфа и расширению
+                                поставок СПГ, рассказал Путин.
+                            </div>
+                        </div>
+                    </div> <!-- Main wrapper panel END -->
+
+                    <div class="panel" id="panel6">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#collapseSix" data-toggle="collapse" data-parent="#accordion" class="collapsed" data-target="#collapseSix">
+                                    Что делать если заказчик умер до окончания контракта<br> с исполнителем?
+                                </a>
+                            </h4>
+
+                        </div>
+                        <div id="collapseSix" class="panel-collapse collapse">
+                            <div class="panel-body">Президент России Владимир Путин прибыл с официальным визитом в
+                                Индию обсудить с руководством страны вопросы сотрудничества в энергетике, в том числе
+                                атомной, машиностроении и военно-технической сфере. Документ о поставках нефти был
+                                подписан в рамках этого визита. Кроме того, Роснефть и Газпром вместе с индийскими
+                                компаниями готовят проекты по освоению российского арктического шельфа и расширению
+                                поставок СПГ, рассказал Путин.
+                                На данный момент лондонские аэропорты, включая Хитроу -
+                                самый загруженный аэропорт в Европе, сообщают о задержках рейсов. Сбой системы
+                                затрагивает не только Хитроу, но также Гатвик, Станстед, Лондон Сити и Лютон.
+                                обязательной продаже, при условии, что она не превысит 50%.
+                            </div>
+                        </div>
+                    </div> <!-- Main wrapper panel END -->
+
+                    <div class="panel" id="panel7">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#collapseSeven" data-toggle="collapse" data-parent="#accordion" class="collapsed" data-target="#collapseSeven">
+                                    Можно ли расплачиваться с исполнителем в кредит?
+                                </a>
+                            </h4>
+
+                        </div>
+                        <div id="collapseSeven" class="panel-collapse collapse">
+                            <div class="panel-body">Президент России Владимир Путин прибыл с официальным визитом в
+                                Индию обсудить с руководством страны вопросы сотрудничества в энергетике, в том числе
+                                атомной, машиностроении и военно-технической сфере. Документ о поставках нефти был
+                                подписан в рамках этого визита. Кроме того, Роснефть и Газпром вместе с индийскими
+                                компаниями готовят проекты по освоению российского арктического шельфа и расширению
+                                поставок СПГ, рассказал Путин.
+                                На данный момент лондонские аэропорты, включая Хитроу -
+                                самый загруженный аэропорт в Европе, сообщают о задержках рейсов. Сбой системы
+                                затрагивает не только Хитроу, но также Гатвик, Станстед, Лондон Сити и Лютон.
+                                обязательной продаже, при условии, что она не превысит 50%.
+                            </div>
+                        </div>
+                    </div> <!-- Main wrapper panel END -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<footer class="shabfoot">
+    <div class="container">
+        <div class="row">
+            <section class="foot_main_area">
+                <section class="col-sm-3">
+                    <ul class="foot_linx_1">
+                        <li><a href="#">Как это работает</a> </li>
+                        <li><a href="#">Как стать исполнителем</a> </li>
+                        <li><a href="#">Безопасность и гарантии</a> </li>
+                        <li><a href="#">Отзывы исполнителей</a> </li>
+                        <li><a href="#">Отзывы заказчиков</a> </li>
+                        <li><a href="#">Награды</a> </li>
+                    </ul>
+                </section>
+                <section class="col-sm-3">
+                    <ul class="foot_linx_2">
+                        <li><a href="#">Карта сайта</a> </li>
+                        <li><a href="#">Стать специалистом</a> </li>
+                        <li><a href="#">Новости</a> </li>
+                        <li><a href="#">Условия использования</a> </li>
+                        <li><a href="#">Правовые документы</a> </li>
+                    </ul>
+                </section>
+                <section class="col-sm-6 col-xs-12 quikform">
+                    <h3>Задать вопрос</h3>
+                    <form id="foot_quick_form" role="form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="foot_email" placeholder="Адрес эл. почты" onfocus="placeholder= '' " onblur="placeholder='Адрес эл. почты' ">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="foot_text" rows="5" placeholder="Сообщение" onfocus="placeholder= '' " onblur="placeholder='Сообщение' "></textarea>
+                        </div>
+                        <button type="submit" class="foot_send btn btn-default">Послать</button>
+                    </form>
+                </section> <!-- Quikform END -->
+                <div class="clearfix"></div>
+                <section class="col-sm-6 col-xs-12 pull-left">
+                    <a href="#"><img src="img/main_logo.png" class="footer_logo img-responsive"> </a>
+                    <img src="img/slide1.jpg" class="img-responsive img-circle tiny_profile_pic_foot">
+                    <ul class="foot_btns_loggedin">
+                        <li class="dropdown">
+                            <button class="btn btn-sm btn_profile_foot dropdown-toggle" type="button" id="footer_profile" data-toggle="dropdown" aria-expanded="false">
+                                Андрей Серов
+                                <i id="ez" class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul id="bottom_profile_drop" class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="footer_profile">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Мой профиль</a></li>
+                                <li class="profile_divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Избранное</a></li>
+                                <li class="profile_divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Настройки</a></li>
+                            </ul>
+                        </li>
+                        <li><button class="btn btn-sm btn_footerenter">Выход</button></li>
+                    </ul>
+                </section>
+                <section class="col-sm-6 col-xs-12 pull-right">
+                    <ul class="socializer">
+                        <li><a href="#" class="fcbk"></a></li>
+                        <li><a href="#" class="twtr"></a></li>
+                        <li><a href="#" class="lkdn"></a></li>
+                    </ul>
+                    <section class="micro_info_area">
+                        <h5>&copy; 2015 Shabashka. All Rights Reserved.</h5>
+                    </section>
+                </section>
+
+            </section> <!-- Footer main area END -->
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+<script>
+    $('#accordion').on('shown.bs.collapse', function() {
+
+        var panel = $('.panel-title a').not('.collapsed');
+
+        $('html, body').animate({
+            scrollTop: panel.offset().top
+        }, 880);
+
+    });
+</script>
+<script src="slick-1.3.15/slick/slick.js"></script>
+<script src="js/jquery.browser.js"></script>
+<script src="js/bootstrapValidator.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/shabashka.js"></script>
+
+</body>
+</html>
